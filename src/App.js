@@ -3,13 +3,32 @@ import logo from './logo.svg';
 import './App.css';
 import './LightSwitch.js'
 
+import Title from './components/Title'
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+
+        <main>
+          <Title />
+        </main>
+      </div>
+    );
+  }
+}
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome to Codaisseur, my visitor
+          Welcome to Codaisseur, visitor
         </p>
         <a
           className="App-link"
@@ -20,10 +39,6 @@ function App() {
           Learn React
         </a>
       </header>
-      <main>
-        <Title content="Some Simple Title" />
-        <LightSwitch />
-      </main>
     </div>
   );
 }
